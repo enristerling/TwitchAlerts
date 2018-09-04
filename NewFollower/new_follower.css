@@ -1,0 +1,190 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 1920px;
+	height: 1080px;
+    overflow: hidden;
+    
+    background-color: bisque;
+}
+
+#scene {
+	width: 1920px;
+	height: 1080px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#updates {
+	position: absolute;
+	left: 80px;
+	top: 80px;
+}
+
+
+/*
+Custom CSS
+*/
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+
+.primaryFont {
+	color: #FFF;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.borderTop {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: -2px;
+    left: 0;
+    background: rgba(42, 200, 245, 1);
+}
+
+#social {
+	position: absolute;
+	left: 0;
+	top: 0;
+    white-space: nowrap;
+    transform: scale(1.5);
+}
+
+.network {
+    padding-right: 40px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.inner {
+    overflow: hidden;
+}
+
+#social .inner {
+	margin-left: 60px;
+	padding: 0 0 10px;
+}
+
+#social .item {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.icon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 40px;
+	height: 50px;
+	font-size: 40px;
+    overflow: hidden;
+    color: rgba(42, 200, 245, 1);
+}
+
+.socialHead, .socialName {
+	padding: 0;
+	position: relative;
+}
+
+.socialHead {
+	padding-top: 10px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.socialName{
+	font-size: 24px;
+	line-height: 24px;
+	padding-top: 2px;
+}
+
+/* ------------------- Animations ------------------- */
+#social .borderTop{
+	width: 0;
+}
+
+.network {
+	width: 0; padding-right: 0;
+}
+
+.icon {
+	text-indent: -40px;
+}
+
+.socialHead,.socialName {
+	left: -200px;
+}
+
+#social .animated .borderTop {
+	animation: soBorderTop 14s forwards;
+}
+
+@keyframes soBorderTop {
+    0% { width: 0;}
+    5% {width: 100%;}
+    95% {width: 100%;}
+    100% {width: 0;}
+}
+
+
+
+#social .animated .network {
+	animation: network 14s forwards;
+}
+
+@keyframes network {
+    0% { width: 0; padding-right: 0;}
+    1% { width: 0; padding-right: 0;}
+    6% {width: 100%; padding-right: 40px;}
+    94% {width: 100%;padding-right: 40px;}
+    99% {width: 0;padding-right: 0;}
+    100% {width: 0;padding-right: 0;}
+}
+
+  
+.animated .icon {
+	animation: icon 14s forwards;
+}
+
+@keyframes icon {
+    0% { text-indent: -40px;}
+    4% { text-indent: -40px;}
+    10% {text-indent: 0px;}
+    90% { text-indent: 0px;}
+    96% { text-indent: -40px;}
+    100% { text-indent: -40px;}
+}
+
+
+.animated .socialHead {
+	animation: socialHead 14s forwards;
+}
+
+@keyframes socialHead {
+    0% { left: -400px;}
+    4% { left: -400px;}
+    11% { left: 0;}
+    89% {left: 0px;}
+    96% {left: -400px;}
+    100% { left: -400px;}
+}
+
+.animated .socialName {
+	animation: socialName 14s forwards;
+}
+
+@keyframes socialName {
+  0% { left: -400px;}
+  6% { left: -400px;}
+  13% { left: 0;}
+  87% {left: 0px;}
+  94% {left: -400px;}
+  100% { left: -400px;}
+}

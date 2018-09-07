@@ -1,4 +1,14 @@
 
+function getNames(){
+	$.get("../../StreamLabsAlerts/most_recent_follower.txt", function(data) {
+	    var myvar = data;
+	  $('#followName').text(data);
+	});
+}
+
+
+getNames(); // load ASAP
+window.setInterval(getNames, 3000);
 
 
 // Add Animations
